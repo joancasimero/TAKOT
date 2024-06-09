@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="681.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Diary">
+   <children>
+      <ImageView fitHeight="681.0" fitWidth="1212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/441526617_1408286263204986_135614139910874332_n.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="123.0" prefHeight="681.0" prefWidth="955.0" style="-fx-background-color: #E6C8AA;">
+         <children>
+            <Pane prefHeight="59.0" prefWidth="966.0" style="-fx-background-color: #5E1718;">
+               <children>
+                  <Button layoutX="836.0" layoutY="13.0" onAction="#logout" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #B47D49; -fx-background-radius: 11;" text="Logout" textFill="#5e1718">
+                     <font>
+                        <Font name="Bookman Old Style" size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="41.0" fitWidth="139.0" layoutX="25.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/445386541_365772223275685_1672641837945156423_n.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <AnchorPane layoutX="262.0" layoutY="69.0" prefHeight="587.0" prefWidth="681.0" style="-fx-background-color: #C8A886; -fx-background-radius: 11; -fx-border-color: #885748; -fx-border-image-width: 3; -fx-border-radius: 11;">
+               <children>
+                  <TextField fx:id="dateField" blendMode="MULTIPLY" layoutX="25.0" layoutY="27.0" prefHeight="41.0" prefWidth="212.0" promptText="Date (YYYY-MM-DD)" style="-fx-background-color: none;">
+                     <font>
+                        <Font name="Bookman Old Style Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="entryTextArea" blendMode="MULTIPLY" cache="true" layoutX="25.0" layoutY="65.0" prefHeight="458.0" prefWidth="629.0" promptText="Diary Entry" style="-fx-background-color: NONE;">
+                     <font>
+                        <Font name="Bookman Old Style Italic" size="17.0" />
+                     </font>
+                  </TextArea>
+                  <ComboBox fx:id="moodComboBox" blendMode="MULTIPLY" editable="true" layoutX="498.0" layoutY="32.0" prefHeight="31.0" prefWidth="156.0" promptText="Mood" />
+                  <Button layoutX="283.0" layoutY="535.0" onAction="#updateEntry" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #885748; -fx-background-radius: 7;" text="Update" textFill="#ffedd9">
+                     <font>
+                        <Font name="Microsoft New Tai Lue Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="414.0" layoutY="535.0" onAction="#deleteEntry" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #885748; -fx-background-radius: 7;" text="Delete" textFill="#ffedd9">
+                     <font>
+                        <Font name="Microsoft New Tai Lue Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="154.0" layoutY="535.0" onAction="#addEntry" prefHeight="31.0" prefWidth="116.0" style="-fx-background-color: #885748; -fx-background-radius: 7;" text="Add" textFill="#ffedd9">
+                     <font>
+                        <Font name="Microsoft New Tai Lue Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ListView fx:id="entryListView" layoutX="21.0" layoutY="69.0" prefHeight="587.0" prefWidth="224.0" style="-fx-background-color: #F6E2CF; -fx-background-radius: 11; -fx-border-radius: 11; -fx-border-width: 1; -fx-border-color: #B4977C;" />
+         </children>
+      </AnchorPane>
+      <Line endX="123.0" startX="123.0" startY="681.0" stroke="#420a0a" strokeWidth="2.0" />
+      <Line endX="123.0" endY="-30.0" layoutX="966.0" layoutY="30.0" startX="123.0" startY="651.0" stroke="#420a0a" strokeWidth="2.0" />
+      <Line endX="-853.0" endY="19.0" layoutX="976.0" layoutY="40.0" startX="113.0" startY="19.0" stroke="#420a0a" strokeWidth="2.0" />
+   </children>
+</AnchorPane>
